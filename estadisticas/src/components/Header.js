@@ -44,12 +44,9 @@ export default function Header(){
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/Home">Home</Nav.Link>
+                  <Nav.Link as={Link} to="/Home" className="active" >Home</Nav.Link>
                   <Nav.Link as={Link} to="/User">Usuarios</Nav.Link>
                   <Nav.Link as={Link} to="/Report">Reportes</Nav.Link>
-                  <Button onClick={() => closeSession()} className="btn btn-secondary ">
-                    <FaUserLock  /> Log Out
-                  </Button>
                   <NavDropdown
                     title="Luis Colmenarez"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}

@@ -46,6 +46,6 @@ export async function makeLoginData(jsn) {
 }
 
 export async function getUsers(){
-  const response = await axios.get('http://localhost/Backend/index.php');
+  const response = await axios.get('http://localhost/Backend2/index.php');
   return response.data;
 }
