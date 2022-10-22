@@ -120,7 +120,7 @@ const User = () => {
                         </Col>
                     </Row>
                     <Row className="mt-3">
-                        <Col md="6">
+                        <Col md="12">
                             <Card className="Card-color" >
                                 <Card.Body>
                                     <div className="text-center">
@@ -134,20 +134,7 @@ const User = () => {
                                 </Card.Body>
                             </Card>
                         </Col>
-                        <Col md="6">
-                            <Card className="Card-color" >
-                                <Card.Body>
-                                    <div className="text-center">
-                                        <Card.Title className="text-center Card-title-text">Log de Usuarios</Card.Title>  
-                                    </div>
-                                    <div className="text-center mt-3">
-                                        <a href="#" className="btn btn-secondary">
-                                        <FaIcons.FaUserCheck className="display-1"></FaIcons.FaUserCheck>
-                                        </a>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                        
                     </Row>
                    
                     

@@ -82,8 +82,12 @@ code {
 
 
 .footer {
+  margin-top: 10%;
   background-color: #1C2833;
   color: #D0D3D4;
+  
+  position: fixed bottom;
+  width: 100vw;
 }
 
 
