@@ -7,7 +7,7 @@ import {AuthContext} from './../../context/AuthContext';
 export default function Login(){
 
     const [loader, setLoader] = useState(false);
-    const [email, setEmail] = useState("");
+    const [usuario, setUsuario] = useState("");
     const [password, setPassword] = useState("");
 
     const {signIn} = useContext(AuthContext);
@@ -15,15 +15,15 @@ export default function Login(){
     const makeRequest = async () => {
         setLoader(true);
 
-        if(email === ""){
-            alert("El campo email no puede estar vacio");
+        if(usuario === ""){
+            alert("El campo usuario no puede estar vacio");
         }else if(password === ""){
             alert("El campo contrasena no puede estar vacio")
         }else{
-            console.log(email, password)
+            console.log(usuario, password)
             const  jsn = {
-                'email': email,
-                'pass': password
+                'usuario': usuario,
+                'contrasena': password
             }
 
             const res = await makeLoginData(jsn);
@@ -48,14 +48,14 @@ export default function Login(){
                         <Card.Body className="">
                             <Card.Title className="mt-3 display-6 text-center">Inicio de Sesion</Card.Title>
                             
-                            <label className="align-left" >Correo:</label>
+                            <label className="align-left" >Usuario:</label>
                             <input type="text" className="form-control" 
-                            value={email}
-                            onChange={(val) => setEmail(val.target.value)}
+                            value={usuario}
+                            onChange={(val) => setUsuario(val.target.value)}
                             />
                             <label className="align-left" >Contraseña:</label>
                             <input className="form-control" 
-                            type="password" 
+                            type="contrasena" 
                             value={password}
                             onChange={(val) => setPassword(val.target.value)}
                             />
@@ -67,9 +67,6 @@ export default function Login(){
                                         </div>
                                     </> : <>
                                         <Button onClick={ () => makeRequest()} className="btn btn-success mt-3">Iniciar Sesion</Button><br></br>
-                                        <Row> 
-                                            <span>Si no posee una cuenta, puede registrarse aqui <a href="/Register">ahora</a></span>
-                                        </Row>
                                     </>
                                 }
                                 

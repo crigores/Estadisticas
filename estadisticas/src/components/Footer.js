@@ -16,7 +16,7 @@ export default function Footer(){
             <div className="footer">
                 <Row className="pt-3">
                     <Col md={12} lg={4} className= "footerleft text-center">
-                        <img alt="Logo" className="img-footer mt-4" width={200} height={200} src="https://previews.123rf.com/images/danilzorin/danilzorin1803/danilzorin180300141/97068517-tienda-online-logo-de-la-tienda-online-logotipo-para-empresas-ilustraci%C3%B3n-vectorial-aislado.jpg"></img>
+                        <img alt="Logo" className="img-footer mt-4" width={200} height={200} src="https://www.urbe.edu/images/logo-urbe.gif"></img>
                     </Col>
 
                     <Col md={12} lg={4} className= "footermid">

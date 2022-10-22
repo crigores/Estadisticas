@@ -4,7 +4,6 @@ import { Container, Row, Col, Table, Modal} from "react-bootstrap";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Sidebar from "../../components/Sidebar";
 import * as FaIcons from 'react-icons/fa';
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -12,7 +11,7 @@ import axios from "axios";
 
 
 
-const UserList = () => {
+const PermisologyUser = () => {
 
     
     const baseUrl = "http://localhost/Backend2/index.php?c=usuarios&a=ver";
@@ -81,7 +80,7 @@ const UserList = () => {
 
                 
                 <Container>
-                    <h2 className="title text-center mt-3">Listado de usuarios registrados</h2>
+                    <h2 className="title text-center mt-3">Permisos de usuarios</h2>
                     <Row className="mt-5">
                         <Col md="1" lg="1" sm="auto"  ></Col>
                         <Col md="6" lg="10" sm="12" xs="4" >
@@ -164,4 +163,4 @@ const UserList = () => {
 }
 
 
-export default UserList;
+export default PermisologyUser;

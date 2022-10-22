@@ -11,7 +11,7 @@ export default function Home(){
         <>
         <Header/>
         <div className="flex">
-            <Sidebar/>
+            
 
             <Container>
             <Row className="mt-5">

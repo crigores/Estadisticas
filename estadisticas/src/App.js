@@ -13,8 +13,10 @@ import Report from "./view/Reports/Report";
 import User from "./view/User/User";
 import CreateUser from "./view/User/CreateUser";
 import UserList from "./view/User/UserList";
+import PermisologyUser from "./view/User/PermisologyUser";
 
 import { AuthContext } from "./context/AuthContext";
+
 
 
 export default function App(){
@@ -116,6 +118,7 @@ return(
                                     <Route path="/User" element={<User />} />
                                     <Route path="/CreateUser" element={<CreateUser />} />
                                     <Route path="/UserList" element={<UserList />} />
+                                    <Route path="/PermisologyUser" element={<PermisologyUser />} />
                                     <Route
                                     path="*"
                                     element={

@@ -15,7 +15,7 @@ const CreateUser = () => {
         <>
             <Header/>
             <div className="flex">
-                <Sidebar/>
+                
                 <Container>
                     <Row className="mt-5">
                         <Col md="2">

@@ -72,7 +72,7 @@ code {
 }
 
 .img-footer{
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .img-social{
@@ -97,5 +97,9 @@ code {
     display: inline-block;
   }
 
+ .navbarcss{
+    background-color: #1C2833;
+    color: #E3EEF2;
+ }
   
 }

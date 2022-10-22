@@ -85,7 +85,7 @@ const User = () => {
             <Header/>
             <div className="flex">
                 
-                <Sidebar/>
+                
                 <Container>
                     <Row className="mt-5">
                         <Col md="6">
@@ -127,9 +127,9 @@ const User = () => {
                                         <Card.Title className="text-center Card-title-text">Permisos de Usuarios</Card.Title>  
                                     </div>
                                     <div className="text-center mt-3">
-                                        <a href="#" className="btn btn-danger">
+                                        <Link className="btn btn-danger" to="/PermisologyUser">
                                         <FaIcons.FaUserCog className="display-1"></FaIcons.FaUserCog>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </Card.Body>
                             </Card>
