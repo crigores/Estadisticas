@@ -2,7 +2,7 @@ import React, { useContext} from "react";
 import { Link} from "react-router-dom";
 import { Navbar, NavItem, NavDropdown , Offcanvas, Nav, Container, Button} from "react-bootstrap";
 import { AuthContext } from "../context/AuthContext";
-import { FaUserLock } from "react-icons/fa";
+import { FaLock, FaUser, FaListAlt, FaHome } from "react-icons/fa";
 
 
 
@@ -44,15 +44,15 @@ export default function Header(){
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/Home" className="active" >Home</Nav.Link>
-                  <Nav.Link as={Link} to="/User">Usuarios</Nav.Link>
-                  <Nav.Link as={Link} to="/Report">Reportes</Nav.Link>
+                  <Nav.Link as={Link} to="/Home" className="active"><FaHome/><span className="px-3">Home</span></Nav.Link>
+                  <Nav.Link as={Link} to="/User"><FaUser/><span className="px-3">Usuarios</span></Nav.Link>
+                  <Nav.Link as={Link} to="/Report"><FaListAlt/><span className="px-3">Reportes</span></Nav.Link>
                   <NavDropdown
                     title="Luis Colmenarez"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
     
-                    <NavDropdown.Item  onClick={() => closeSession()} className="Navop">Log Out
+                    <NavDropdown.Item  onClick={() => closeSession()} className="Navop"><FaLock/> <span className="px-3">Log Out</span>
                     </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
