@@ -25,7 +25,7 @@ export default function Footer(){
 
                         <p>Email:
                         </p>
-                        <span>soporte@tiendaonline.com</span>
+                        <span>infourbe@edu.ve</span>
                     </Col>
 
                     <Col md={12} lg={4} className= "footerright">
@@ -33,8 +33,9 @@ export default function Footer(){
                         <hr></hr>
                         
 
-                        <a href="https://es-la.facebook.com/" target="_blank"><img width={50} height={50} className='img-social' src="https://thumbs.dreamstime.com/b/icono-del-logotipo-de-facebook-en-blanco-y-negro-alta-resoluci%C3%B3n-con-fondo-archivo-pasos-vectoriales-disponible-para-descarga-175771686.jpg" alt="Facebook Logo"/></a>
-                        <a href="https://www.instagram.com/" target="_blank"><img width={50} height={50} className='img-social' src="https://us.123rf.com/450wm/alsstocks450/alsstocks4501911/alsstocks450191100137/136346965-voronezh-rusia-21-de-noviembre-de-2019-icono-redondo-del-logotipo-de-instagram-en-color-negro.jpg?ver=6" alt="Instagram Logo"></img></a>
+                        <a href="https://es-la.facebook.com/infourbe/" target="_blank"><img width={50} height={50} className='img-social' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook Logo"/></a>
+                        <a href="https://www.instagram.com/infourbe/?hl=es" target="_blank"><img width={50} height={50} className='img-social' src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram Logo"></img></a>
+                        <a href="https://twitter.com/infourbe?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img width={50} height={50} className='img-social' src="https://www.droid-life.com/wp-content/uploads/2022/10/Twitter-1200x1200-cropped.jpg" alt="Instagram Logo"></img></a>
                     </Col>
                 </Row>
 
