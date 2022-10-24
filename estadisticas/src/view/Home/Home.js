@@ -19,7 +19,7 @@ export default function Home(){
                     <Card className="justify-content-center align-items-center">
                         <Card.Title className="text-center mt-3 mb-3">
                             <h2>
-                                Bienvenido a la Tienda X Online
+                                Bienvenido a la App de Estadisticas de Inscripciones de URBE
                             </h2>
                         </Card.Title>
                     </Card>
