@@ -26,7 +26,7 @@ const Report = () => {
     }
 
     const getEscuela = async()=>{
-        await axios.get(baseUrl)
+        await axios.get(baseUrl2)
         .then(response=>{
             setDataEscuela(response.data)
         })

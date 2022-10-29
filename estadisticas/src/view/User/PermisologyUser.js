@@ -38,14 +38,14 @@ const PermisologyUser = () => {
             ...prevState,
             [name]: value
         }))
-        console.log(selected);
+        // console.log(selected);
     }
 
     const getRoles=async()=>[
         await axios.get(baseUrl2)
         .then(response=>{
             setDataRoles(response.data);
-            console.log(response.data)
+            // console.log(response.data)
         })
     ]
 

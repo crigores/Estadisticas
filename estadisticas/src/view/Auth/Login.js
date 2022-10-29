@@ -20,14 +20,14 @@ export default function Login(){
         }else if(password === ""){
             alert("El campo contrasena no puede estar vacio")
         }else{
-            console.log(usuario, password)
+            // console.log(usuario, password)
             const  jsn = {
                 'usuario': usuario,
                 'contrasena': password
             }
 
             const res = await makeLoginData(jsn);
-            console.log(res);
+            // console.log(res);
             signIn(res);
 
             window.localStorage.setItem("token",res)

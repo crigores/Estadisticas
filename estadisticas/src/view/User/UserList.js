@@ -4,8 +4,7 @@ import { Container, Row, Col, Table, Modal} from "react-bootstrap";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Sidebar from "../../components/Sidebar";
-import * as FaIcons from 'react-icons/fa';
+// import * as FaIcons from 'react-icons/fa';
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -31,7 +30,7 @@ const UserList = () => {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    // const handleShow = () => setShow(true);
 
     const handleChange=e=>{
         const {name, value}=e.target;
@@ -46,7 +45,7 @@ const UserList = () => {
         await axios.get(baseUrl2)
         .then(response=>{
             setDataRoles(response.data);
-            console.log(response.data)
+            // console.log(response.data)
         })
     ]
 
@@ -93,18 +92,17 @@ const UserList = () => {
                                         <th>Tipo de Usuario</th>
                                         <th>Estado</th>
                                         <th colSpan={2}>Opciones</th>
-                                        
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {data.map(usuarios=>(
-                                        <tr key={usuarios.id}>
+                                    {data.map((usuarios, index) =>(
+                                        <tr key={index + 1}>
                                             <td>{usuarios.primerNombre + ' ' +  usuarios.primerApellido}</td>
                                             <td>{usuarios.usuario}</td>
                                             <td>{usuarios.rol}</td>
                                             <td>{usuarios.estado_usuario}</td>
-                                            <td><a href="#" onClick={handleShow} className="btn btn-primary"><FaIcons.FaUserEdit></FaIcons.FaUserEdit></a></td>
-                                            <td><a className="btn btn-danger"><FaIcons.FaTrash></FaIcons.FaTrash></a></td>
+                                            {/* <td><a href="#" onClick={handleShow} className="btn btn-primary"><FaIcons.FaUserEdit></FaIcons.FaUserEdit></a></td>
+                                            <td><a className="btn btn-danger"><FaIcons.FaTrash></FaIcons.FaTrash></a></td> */}
                                         </tr>
                                     ))}
                                     
