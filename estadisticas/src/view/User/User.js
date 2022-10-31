@@ -148,7 +148,7 @@ const User = () => {
                     <Modal.Body>
                         <div className="form-group">
                             <label>Nombre de Usuario:</label><br/>
-                            <input value={usuario} onChange={(val) => setUsuario(val.target.value)} id="usuario" name="usuario" type="text" className="form-control"/>
+                            <input  id="usuario" name="usuario" type="text" className="form-control"/>
                             <label>Nombre:</label><br/>
                             <select id="idpersona" name="idpersona" className="form-control">
                                 <option value={0}></option>
