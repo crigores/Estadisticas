@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import Sidebar from "../../components/Sidebar";
+//import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
@@ -21,10 +21,12 @@ const User = () => {
         usuario: '',
         idpersona: '',
         idrol: '',
-        correo: '',
-        password: '',
-        guardar: ''
+        password: ''
     });
+
+    const [usuario, setUsuario]=useState([]);
+
+
    
     const [show, setShow] = useState(false);
 
@@ -44,7 +46,7 @@ const User = () => {
         await axios.get(baseUrl)
         .then(response=>{
             setDataRoles(response.data);
-            console.log(response.data)
+            //console.log(response.data)
         })
     ]
 
@@ -52,21 +54,23 @@ const User = () => {
         await axios.get(baseUrl2)
         .then(response=>{
             setDataPersonas(response.data);
-            console.log(response.data)
+            //console.log(response.data)
         })
     ]
 
     const registrarUsuarios=async()=>{
         var f = new FormData();
-        f.append("usuario", selected.usuario);
+        f.append("usuario", usuario);
         f.append("password", selected.password);
         f.append("idpersona", selected.idpersona);
         f.append("rol", selected.idrol);
-        f.append("correo_primario", selected.correo);
-        f.append("guardar", "");
+
+        console.log(selected.idpersona);
+        
         await axios.post(baseUrl3)
         .then(response=>{
             setData(response.data);
+            console.log(response.data);
         })
     }
 
@@ -144,12 +148,12 @@ const User = () => {
                     <Modal.Body>
                         <div className="form-group">
                             <label>Nombre de Usuario:</label><br/>
-                            <input id="user" name="user" type="text" className="form-control"/>
+                            <input value={usuario} onChange={(val) => setUsuario(val.target.value)} id="usuario" name="usuario" type="text" className="form-control"/>
                             <label>Nombre:</label><br/>
                             <select id="idpersona" name="idpersona" className="form-control">
                                 <option value={0}></option>
                                 {datapersonas.map(persona=>(
-                                    <option key={persona.id} value={persona.id}>{persona.nombre}</option>
+                                    <option key={persona.id} value={persona.id }>{persona.primerNombre + ' ' + persona.segundoNombre + ' ' + persona.primerApellido + ' ' + persona.segundoApellido}</option>
                                 ))}
                             </select>
                             <label>Rol:</label><br/>
@@ -160,10 +164,11 @@ const User = () => {
                                 ))}
                             </select>
                             <label>Contrasena:</label><br/>
-                            <input id="pass1" name="pass1" type="password" className="form-control"/>
+                            <input id="password" name="password" type="password" className="form-control"/>
                             <label>Repetir Contrasena:</label><br/>
                             <input id="pass2" name="pass2" type="password" className="form-control"/>
-                        </div>
+                        </div> 
+                        
                     </Modal.Body>
                     <Modal.Footer>
                         <button id="guardar" name="guardar" className="btn btn-primary" onClick={registrarUsuarios}>Registrar</button>
