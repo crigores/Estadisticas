@@ -14,9 +14,13 @@ import axios from "axios";
 
 const UserList = () => {
 
-    
+    // Consulta para lista de usuarios
     const baseUrl = "http://localhost/Backend2/index.php?c=usuarios&a=ver";
+
+    // Consulta para obtener la lista de roles
     const baseUrl2="http://localhost/Backend2/index.php?c=roles&a=ver";
+
+    // Consulta para obtener la lista de personas
     const baseUrl3="http://localhost/Backend2/index.php?c=personas&a=ver";
     const [data, setData]=useState([]);
     const [dataroles, setDataRoles]=useState([]);
@@ -128,16 +132,10 @@ const UserList = () => {
                             <select id="idpersona" name="idpersona" className="form-control">
                                 <option value={0}></option>
                                 {datapersonas.map(persona=>(
-                                    <option key={persona.id} value={persona.id}>{persona.nombre}</option>
+                                    <option key={persona.id} value={persona.id}>{persona.primerNombre + ' ' + persona.segundoNombre + ' ' + persona.primerApellido + ' ' +  persona.segundoApellido}</option>
                                 ))}
                                 
                                     
-                            </select>
-                            <label>Estado</label><br/>
-                            <select id="estado" name="estado" className="form-control">
-                                <option value={0}></option>
-                                <option value={"A"}>Activo</option>
-                                <option value={"I"}>Inactivo</option>
                             </select>
                             <label>Contrasena:</label><br/>
                             <input id="pass1" name="pass1" type="password" className="form-control"/>
